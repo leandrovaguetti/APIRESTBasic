@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-	res.send('Alô REST API');
+	res.send('Alô REST API tesste');
 });
 
 
@@ -41,7 +41,11 @@ app.get('/users', (req, res) => {
 	res.json(users);
 });
 
-app.get('/api/echobody', (req,res) => {
+/*app.get('/api/echobody', (req,res) => {
+  res.send(req.body);
+});*/
+
+app.post('/api/echobody', (req,res) => {
   res.send(req.body);
 });
 
